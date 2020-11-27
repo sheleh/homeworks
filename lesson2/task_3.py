@@ -1,0 +1,19 @@
+#  Using python as a calculator.
+a = 100
+b = 11
+a = int(a)  # transformation into integer type
+b = int(b)  # transformation into integer type
+addition_res = a + b
+subtraction_res = a - b
+division_res = format(a / b, '.9f')
+multipl_res = a * b
+exponentation_res = a ** b
+modulus_res = a % b
+floor_division_res = a // b
+print(f'{a} + {b} = {addition_res} \n'
+      f'{a} - {b} = {subtraction_res} \n'
+      f'{a} / {b} = {division_res} \n'
+      f'{a} * {b} = {multipl_res} \n'
+      f'{a} ** {b} = {exponentation_res} \n'
+      f'{a} % {b} = {modulus_res} \n'
+      f'{a} // {b} = {floor_division_res}')
