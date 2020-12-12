@@ -7,7 +7,7 @@ def make_operation(operator, *args):
     res = 0
     if operator == '+':
         for i in args:
-            res += i
+            res += i   #но так работать корректно не будет при '-' в первом значении
     elif operator == '-':
         for i in range(len(args)-1):
             print(i)
