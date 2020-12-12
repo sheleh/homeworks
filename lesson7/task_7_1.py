@@ -3,9 +3,9 @@
 # The function should then print “My favorite movie is named {name}”.
 
 def movie(movie_name=False):
-    if not movie_name:
+    if not movie_name or movie_name[0] == ' ':
         movie_name = input('Please enter your favorite movie name: ')
-    print(f'The name of my favorite movie is {movie_name}')
+    print(f'The name of my favorite movie is {movie_name.title()}')
 
 
-movie('Kill bill')
+movie('kill bill')
