@@ -4,13 +4,16 @@
 # Then create a method `human_age` which returns the dog’s age in human equivalent.
 
 class Dog:
+    age_factor = 7
     def __init__(self, dogs_age):
         self.dogs_age = dogs_age
-        self.age_factor = dogs_age*7
 
-    def human_age(self):
-        return self.age_factor
+
+    def human_age(self,age):
+        self.age = age
+        self.age *= self.age_factor
+        return self.age
 
 
 martin = Dog(7)
-print(martin.human_age())
+print(martin.human_age(10))
