@@ -20,11 +20,10 @@ class With_Index:
     def __iter__(self):
         return self
     def __next__(self):
-        if self.index == (len(self.data)):
+        if self.index > (len(self.data)):
             raise StopIteration
         else:
-
-            self.res = self.index, self.data[self.index]
+            self.res = self.index, self.data[self.index-1]
             self.index += 1
             return self.res  ### Почему не работает yield?(бесконечный цикл)
 
