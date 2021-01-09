@@ -24,3 +24,9 @@ class Sq_Brackets:
 
 for i in Sq_Brackets(data):
     print(i)
+def f(value):
+   while True:
+      value = (yield value)
+
+a = f(10)
+
