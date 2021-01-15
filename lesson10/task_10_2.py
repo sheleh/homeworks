@@ -5,14 +5,13 @@
 
 class Dog:
     age_factor = 7
+
     def __init__(self, dogs_age):
         self.dogs_age = dogs_age
 
-
-    def human_age(self,age):
-        self.age = age
-        self.age *= self.age_factor
-        return self.age
+    def human_age(self, age):
+        age *= self.age_factor
+        return age
 
 
 martin = Dog(7)
