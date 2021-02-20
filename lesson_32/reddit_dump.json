@@ -1,0 +1,227 @@
+[
+    [
+        1613545626,
+        {
+            "Author": "hackemslashem",
+            "Date": "Wed Feb 17 09:07:06 2021",
+            "body": "You have a class in your constants file. This seems like an unnecessary extra, it requires you to instantiate the class to use the constants.\n\nRemove the class, import constants, access constants as attributes of the class. Easy!",
+            "id": "gnqpq6b"
+        }
+    ],
+    [
+        1613545678,
+        {
+            "Author": "ubernostrum",
+            "Date": "Wed Feb 17 09:07:58 2021",
+            "body": "[This old blog post](http://web.archive.org/web/20201109020625/http://geekswithblogs.net/brians/archive/2008/06/14/122861.aspx) claims to explain the origin of the name \"IronPython\" (which was then adopted by IronRuby and IronScheme.",
+            "id": "gnqpsmr"
+        }
+    ],
+    [
+        1613545799,
+        {
+            "Author": "SwaggyOnTwitch",
+            "Date": "Wed Feb 17 09:09:59 2021",
+            "body": "This sounds weird but I only started with python because of selenium web scrapping so the first Thing I wrote with and without help from a tutorial was a eBay webscrapper",
+            "id": "gnqpy8d"
+        }
+    ],
+    [
+        1613545859,
+        {
+            "Author": "PeridexisErrant",
+            "Date": "Wed Feb 17 09:10:59 2021",
+            "body": "    import sys;\n\n    class PrinterFactory(object):\n        sys.stdout.write(\"Hello World\");\n\n    if __name__ != \"__main__\":\n        PrinterFactory().run\n\nPython *can too* have semicolons.  Doesn't need `;`, but it has em.",
+            "id": "gnqq11i"
+        }
+    ],
+    [
+        1613546072,
+        {
+            "Author": "hackemslashem",
+            "Date": "Wed Feb 17 09:14:32 2021",
+            "body": "Actually those are static variables so you probably don't have to instantiate it, still I don't like the extra import...\n\nFrom muffin.muffin import Muffin as mfn",
+            "id": "gnqqaxz"
+        }
+    ],
+    [
+        1613546157,
+        {
+            "Author": "nuephelkystikon",
+            "Date": "Wed Feb 17 09:15:57 2021",
+            "body": "I think you meant to do binary here, not useless hex.",
+            "id": "gnqqexr"
+        }
+    ],
+    [
+        1613546224,
+        {
+            "Author": "PeridexisErrant",
+            "Date": "Wed Feb 17 09:17:04 2021",
+            "body": "If you miss it, you can always:\n\n    import sys;\n\n    class PrinterFactory(object): {\n        sys.stdout.write(\"Hello \"),\n        sys.stdout.write(\"World\\n\"),\n    }\n\nUnclear why you'd *want* to, but you could!",
+            "id": "gnqqi4b"
+        }
+    ],
+    [
+        1613546677,
+        {
+            "Author": "GJaggerjack",
+            "Date": "Wed Feb 17 09:24:37 2021",
+            "body": "Solving problems using python and trying to convert mathematical solutions related to statistics into python codes.\nI'm up for becoming a data scientist. \ud83d\ude05",
+            "id": "gnqr2yu"
+        }
+    ],
+    [
+        1613546703,
+        {
+            "Author": "SamuSeen",
+            "Date": "Wed Feb 17 09:25:03 2021",
+            "body": "Stop right there, criminal scum. You violated the law.",
+            "id": "gnqr462"
+        }
+    ],
+    [
+        1613546721,
+        {
+            "Author": "GJaggerjack",
+            "Date": "Wed Feb 17 09:25:21 2021",
+            "body": "About what? I can try if it's related to something that I know.",
+            "id": "gnqr4z1"
+        }
+    ],
+    [
+        1613546935,
+        {
+            "Author": "Treeeant",
+            "Date": "Wed Feb 17 09:28:55 2021",
+            "body": "This has a couple of good ideas:\n\n* the module browser\n* the insta-plotter for a few common data types\n* The \"block programming\" has good potential, but at very least it needs to be able to decompile existing functions. It is very much possible and has been done in the past, I have seen a tool that outputs a static svg.\n\n**However**\n\nFor this to really catch on, it needs to become a plug-in or app for JupyterLab. Otherwise, you will be forever battling against \"it doesn't yet do X\", or \"how do I Import flask\" e.t.c. -- and essentially having to re-do functionality that the community has already implemented. \n\nAt this point, it is not useful for any pro work. Maybe for simple demonstrations. \n\n\nBest of luck mate!",
+            "id": "gnqreq3"
+        }
+    ],
+    [
+        1613547200,
+        {
+            "Author": "tepancalli",
+            "Date": "Wed Feb 17 09:33:20 2021",
+            "body": "I would ( and actually did ) start with official documentation \nhttps://www.python.org/about/gettingstarted/\n\nThen depending on the use case you need to fulfill look for tutorials on how to do any particular process",
+            "id": "gnqrqx2"
+        }
+    ],
+    [
+        1613547381,
+        {
+            "Author": "[deleted]",
+            "Date": "Wed Feb 17 09:36:21 2021",
+            "body": "[removed]",
+            "id": "gnqrz5v"
+        }
+    ],
+    [
+        1613547457,
+        {
+            "Author": "MrReginaldAwesome",
+            "Date": "Wed Feb 17 09:37:37 2021",
+            "body": "Holy shit your comment worked!",
+            "id": "gnqs2li"
+        }
+    ],
+    [
+        1613547485,
+        {
+            "Author": "interaktionen",
+            "Date": "Wed Feb 17 09:38:05 2021",
+            "body": "Thank you sir!",
+            "id": "gnqs3uz"
+        }
+    ],
+    [
+        1613547711,
+        {
+            "Author": "SupaTrooper",
+            "Date": "Wed Feb 17 09:41:51 2021",
+            "body": "Bitwise operations change the information by operating on the register (where a variable is stored).\n\nSay you have `x = 5` and you're storing it in a 4 bit register (a nibble), this would be `0101`. If you wanted to double x, you'd normally say `x=x*2`. But another way would be to shift the bits left `x=x&lt;&lt;1`. The register would look like this `1010`, which is 10 in base 10.\n\nSimilarly, you can bitshift right to divide by 2. Keep in mind the bit on the end (depending on left or right shoft) will fall off the end. Also eith right shift you need to decide if you should fill msb with 0 or 1.\n\nBitwise operations are pretty handy for fast solutions and cool shortcuts.",
+            "id": "gnqse2l"
+        }
+    ],
+    [
+        1613547797,
+        {
+            "Author": "PlasterAndPlates",
+            "Date": "Wed Feb 17 09:43:17 2021",
+            "body": "I think you spend too little time understanding laws.",
+            "id": "gnqshxe"
+        }
+    ],
+    [
+        1613547983,
+        {
+            "Author": "[deleted]",
+            "Date": "Wed Feb 17 09:46:23 2021",
+            "body": "[deleted]",
+            "id": "gnqsq10"
+        }
+    ],
+    [
+        1613548073,
+        {
+            "Author": "elrey_scarbrow",
+            "Date": "Wed Feb 17 09:47:53 2021",
+            "body": "*Mindblown.*\n\nBut now that I think about it, the semicolon is used in the interpreter to chain multiple lines into one line like\n\n    &gt;&gt;&gt;from time import time\n    &gt;&gt;&gt;t1 = time(); func(); time()-t1\n\nSo it's a remnant of the interpreter. And I'm thinking this is how Jupyter notebook works?",
+            "id": "gnqstv0"
+        }
+    ],
+    [
+        1613548607,
+        {
+            "Author": "oneonetwooneonetwo",
+            "Date": "Wed Feb 17 09:56:47 2021",
+            "body": "It's six and half a dozen, really\n\nhttps://lmgtfy.app/?q=%3C%3C+operator+python\n\nhttps://lmgtfy.app/?q=bit+shift+python",
+            "id": "gnqtgpi"
+        }
+    ],
+    [
+        1613549411,
+        {
+            "Author": "alexthelyon",
+            "Date": "Wed Feb 17 10:10:11 2021",
+            "body": "It's impossible in a turing complete language to know ahead of time what a program will do without running it to find out. You may be able to write some heuristic to detect some cases but you'll never find a general solution. (this somewhat resembles the halting problem, if you want to read more)\n\nThe only thing you can do here is set CPU/ram limits and a timeout.",
+            "id": "gnquel1"
+        }
+    ],
+    [
+        1613549424,
+        {
+            "Author": "agree-with-you",
+            "Date": "Wed Feb 17 10:10:24 2021",
+            "body": "I agree, this does not seem possible.",
+            "id": "gnquf43"
+        }
+    ],
+    [
+        1613549869,
+        {
+            "Author": "memester_hub",
+            "Date": "Wed Feb 17 10:17:49 2021",
+            "body": "no benefit i made it as a learning project sorry i forgot to mention that",
+            "id": "gnqux86"
+        }
+    ],
+    [
+        1613550612,
+        {
+            "Author": "salanderlogic",
+            "Date": "Wed Feb 17 10:30:12 2021",
+            "body": "It's cool! Thanks for sharing:)",
+            "id": "gnqvovj"
+        }
+    ],
+    [
+        1613550840,
+        {
+            "Author": "GoofAckYoorsElf",
+            "Date": "Wed Feb 17 10:34:00 2021",
+            "body": "We just witnessed another big bang... theoretically",
+            "id": "gnqvxev"
+        }
+    ]
+]
