@@ -21,4 +21,6 @@ def weather():
     else:
         print('city not founded')
 
-weather()
+
+if __name__ == '__main__':
+    weather()
