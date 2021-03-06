@@ -1,6 +1,5 @@
 # write a query in SQL to display the first name of all employees including the first name of their manager
-# write a query in SQL to display the full name (first and last name),
-# and salary of those employees who work in any department located in London
+
 
 
 
@@ -77,7 +76,18 @@ def get_data6():
     for row in q:
         print(row)
     q.close()
+# write a query in SQL to display the full name (first and last name),
+# and salary of those employees who work in any department located in London
+
+def get_data7():
+    cursor = conn.cursor()
+    q = cursor.execute('''SELECT employees.first_name, employees.last_name, locations.city FROM employees LEFT JOIN departments ON 
+        departments.department_id=employees.department_id LEFT JOIN locations ON locations.location_id=departments.location_id 
+        WHERE locations.city='London' ''')
+    for row in q:
+        print(row)
+    q.close()
 
 
-get_data6()
+get_data7()
 
