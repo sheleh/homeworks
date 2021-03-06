@@ -81,9 +81,10 @@ def get_data6():
 
 def get_data7():
     cursor = conn.cursor()
-    q = cursor.execute('''SELECT employees.first_name, employees.last_name, locations.city FROM employees LEFT JOIN departments ON 
-        departments.department_id=employees.department_id LEFT JOIN locations ON locations.location_id=departments.location_id 
-        WHERE locations.city='London' ''')
+    q = cursor.execute('''SELECT employees.first_name, employees.last_name, employees.salary, locations.city 
+    FROM employees LEFT JOIN departments ON 
+    departments.department_id=employees.department_id LEFT JOIN locations ON locations.location_id=departments.location_id 
+    WHERE locations.city='London' ''')
     for row in q:
         print(row)
     q.close()
