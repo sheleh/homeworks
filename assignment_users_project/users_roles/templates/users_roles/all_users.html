@@ -1,0 +1,40 @@
+{% extends "users_roles/base.html" %}
+{% block content %}
+<div class="text-right">
+    <a role="button" class="btn btn-primary" href="{% url 'create_user' %}">ADD USER</a>
+    <br>
+    <br>
+</div>
+<table style="width:100%" border="1px solid black">
+    <tr>
+        <th class="text-center">ID</th>
+        <th class="text-center">Username</th>
+        <th class="text-center">is_admin</th>
+        <th class="text-center">Group</th>
+        <th class="text-center">Actions</th>
+    </tr>
+{% for user in users %}
+    <tr>
+        <th>{{ user.id }}</th>
+        <th>{{ user }}</th>
+        <th>{{ user.is_admin }}</th>
+        <th>{{ user.group }}</th>
+        <th width="29%">
+            <div class="container">
+                <div class="row">
+                <div class="col-sm">
+                    <a class="btn btn-outline-primary" role="button" href="{% url 'edit_user' user.id %}">Edit User</a>
+                </div>
+                <div class="col-sm">
+                    <form method="POST" action="{% url 'delete_user' user.id %}">
+                {% csrf_token %}
+                <button id="delete" type="submit" class="btn btn-outline-primary">Delete</button>
+            </form>
+                </div>
+            </div>
+                </div>
+        </th>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
